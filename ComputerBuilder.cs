@@ -1,33 +1,38 @@
 internal class ComputerBuilder : IComputerBuilder
 {
-    private IComputer computer = new Computer();
+    private readonly IComputer _computer;
+
+    public ComputerBuilder()
+    {
+        _computer = new Computer();
+    }
 
     public IComputer Build()
     {
-        return computer;
+        return _computer;
     }
 
     public IComputerBuilder SetCPU(string cpu)
     {
-        computer.CPU = cpu;
+        _computer.CPU = cpu;
         return this;
     }
 
     public IComputerBuilder SetGPU(string gpu)
     {
-        computer.GPU = gpu;
+        _computer.GPU = gpu;
         return this;
     }
 
     public IComputerBuilder SetMemory(string memory)
     {
-        computer.Memory = memory;
+        _computer.Memory = memory;
         return this;
     }
 
     public IComputerBuilder SetStorage(string storage)
     {
-        computer.Storage = storage;
+        _computer.Storage = storage;
         return this;
     }
 }
