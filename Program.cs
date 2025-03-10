@@ -18,5 +18,6 @@ miningPC.Display();
 Console.WriteLine("Development PC:");
 developmentPC.Display();
 
+
 Console.WriteLine("Custom PC:");
 customPC.Display();
